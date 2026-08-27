@@ -31,8 +31,7 @@ jobs:
       - name: Build Next.js app
         run: npx next build --no-lint
         env:
-          NEXT_TELEMETRY_DISABLED: 1
-          TS_NODE_TRANSPILE_ONLY: 1
+          TSC_COMPILE_ON_ERROR: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
